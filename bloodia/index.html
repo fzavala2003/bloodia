@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bloodia — Ciencia de la sangre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logoB.png" type="image/png">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="imagenes/bloodia_miniatura.png" alt="Bloodia" class="brand-logo">
+        <span class="brand-text">Bloodia</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <button id="btn-burger" class="burger" aria-label="Abrir menú">☰</button>
+        <ul class="nav-list" id="nav-list">
+          <li><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li><a class="nav-link" href="imagenes.html">Galería</a></li>
+          <li><a class="nav-link" href="vocabulario.html">Vocabulario</a></li>
+          <li><a class="nav-link" href="bibliografia.html">Bibliografía</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Conoce tu sangre: visual, clara y confiable</h1>
+          <p class="lead">Material didáctico desarrollado por estudiantes de medicina para estudiantes: atlas visual, guía de estudio y explicaciones claras de cada componente sanguíneo.</p>
+          <p>
+            <a class="btn btn-primary" href="imagenes.html">Ver galería</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <img src="imagenes/bloodia.png" alt="Logotipo" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container section-card">
+      <div class="about-grid">
+        <div>
+          <h2>¿Quiénes somos?</h2>
+          <p>Somos un grupo de estudiantes de medicina de la Universidad católica de Guayaquil, que conoce el tedioso proceso que es la lectura de grandes libros para el aprendizaje. Es por eso que creamos Bloodia, un sitio web donde puedes aprender lo más simple e importante de cada componente de nuestra sangre. Aprender nunca tiene que ser aburrido.</p>
+        </div>
+        <div class="card-stats">
+          <div class="stat">
+            <h3>8</h3>
+            <p>Imágenes clasificadas</p>
+          </div>
+          <div class="stat">
+            <h3>10</h3>
+            <p>Bibliografía</p>
+          </div>
+          <div class="stat">
+            <h3>4</h3>
+            <p>Autores estudiantes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="container section-alt">
+      <h2 class="section-title">Recursos destacados</h2>
+      <div class="cards-grid">
+        <article class="resource-card">
+          <img src="imagenes/celulas_sanguineas.jpg" alt="Atlas">
+          <h3><a href="imagenes.html" style="color:rgb(209, 184, 138);text-decoration: none;">Atlas de Imágenes</a></h3>
+          <p>Galería categorizada de eritrocitos, leucocitos, plaquetas y más.</p>
+        </article>
+        <article class="resource-card">
+          <img src="imagenes/hisotology_guide.png" alt="Guías">
+          <h3><a href="https://histologyguide.com/" style="color:rgb(209, 184, 138);text-decoration: none;">Guías de estudio</a></h3>
+          <p>Resúmenes clínicos y puntos clave para consulta rápida.</p>
+        </article>
+        <article class="resource-card">
+          <img src="imagenes/Ross-Histología.jpg" alt="Biblioteca">
+          <h3><a href="bibliografia.html" style="color:rgb(209, 184, 138);text-decoration: none;">Biblioteca</a></h3>
+          <p>Enlaces a artículos y recursos confiables.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Bloodia</strong>
+        <p>Material creado por estudiantes de la Universidad Católica de Guayaquil.</p>
+    </div>
+    <div>Contacto: +593 99 422 3712</div>
+    <div class="copyright">© 2025 Bloodia — Todos los derechos reservados</div>
+  </footer>
+
+  <script>
+    // Burger menu
+    const btnBurger = document.getElementById('btn-burger');
+    const navList = document.getElementById('nav-list');
+    btnBurger.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+
+    // Change header on scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+  </script>
+</body>
+</html>
