@@ -30,7 +30,7 @@ def test_mobile_menu_opens(bloodia):
 
     assert "open" in menu.get_attribute("class").split()
 
-
+#
 def test_logo_returns_to_home(bloodia):
     """El logotipo permite regresar a Inicio."""
     bloodia.find_element(By.LINK_TEXT, "Galería").click()
